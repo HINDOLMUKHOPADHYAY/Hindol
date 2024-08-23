@@ -1,99 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Button Library</title>
+<link rel="stylesheet" href="button.css" />
 <style>
-.button1 {font-size: 50px;}
-.button2 {font-size: 50px;}
-.button3 {font-size: 50px;}
-.button4 {font-size: 50px;}
-.button5 {font-size: 50px;}
-.button1 {padding: 10px 20px;}
-.button2 {padding: 10px 20px;}
-.button3 {padding: 10px 20px;}
-.button4 {padding: 10px 20px;}
-.button5 {padding: 10px 20px;}
-.button1 
+.btn 
 {
-  box-shadow: 0 5px 12px 0 rgba(0,0,0,0.10), 0 6px 20px 0 rgba(0,0,0,0.19);
+border: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+cursor: pointer;
+color: #fff;
+transition: all 0.5s;
 }
+.danger-btn 
+{
+    background-color: rgb(253, 7, 27);
+}
+.danger-btn:hover 
+{
+    box-shadow: 0 8px 25px -8px rgb(248, 1, 22);
+}
+.success-btn 
+{
+    background-color: rgb(64, 223, 50);
+}
+.success-btn:hover 
+{
+    box-shadow: 0px 8px 25px -8px rgb(70, 201, 58);
+}
+.primary-btn 
+{
+    background-color: rgb(94, 3, 250);
+}
+.primary-btn:hover 
+{
+    box-shadow: 0px 8px 25px -8px rgb(80, 4, 212);
+}
+.warning-btn 
+{
+    background-color: rgb(238, 179, 17);
+}
+.warning-btn:hover 
+{
+    box-shadow: 0px 8px 25px -8px rgb(253, 188, 10);
+}
+:root 
+{
+    --btn-padding: 10px;
+    --btn-border-radius: 5px;
+    --btn-transition: all 0.5s;
+    --btn-shadow-hover: 0 8px 25px -8px;
 
-.button2: 
-{
-  box-shadow: 0 25px 40px 0 rgba(0,0,0,0.22), 0 14px 40px 0 rgba(0,0,0,0.19);
+    --danger-color: rgb(253, 7, 27); 
+    --success-color: rgb(64, 223, 50);
+    --primary-color: rgb(94, 3, 250);
+    --warning-color: rgb(238, 179, 17);
+    --dark-color: rgb(30, 30, 30);
 }
-.button3 
+.btn 
 {
-  box-shadow: 0 30px 40px 0 rgba(0,0,0,0.40), 0 20px 22px 0 rgba(0,0,0,0.19);
+    border: 10px;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius);
+    cursor: pointer;
+    color: #fff;
+    transition: var(--btn-transition);
 }
-.button4:
+.danger-btn 
 {
-  box-shadow: 0 25px 30px 0 rgba(0,0,0,0.44), 0 20px 44px 0 rgba(0,0,0,0.19);
+background-color: var(--danger-color);
 }
-.button5:
+.danger-btn:hover 
 {
-  box-shadow: 0 35px 60px 0 rgba(0,0,0,0.35), 0 17px 35px 0 rgba(0,0,0,0.19);
+box-shadow: var(--btn-shadow-hover) var(--danger-color);
 }
-.button1 
+.success-btn 
 {
-  transition-duration: 0.4s;
+    background-color: var(--success-color);
 }
-button1:hover 
+.success-btn:hover 
 {
-  background-color:  #e7e7e7 ;
-  color: magenta;
+    box-shadow: var(--btn-shadow-hover) var(--success-color);
 }
-.button2 
+.primary-btn 
 {
-  transition-duration: 0.5s;
+background-color: var(--primary-color);
 }
-
-.button2:hover 
+.primary-btn:hover 
 {
-  background-color: #555555;
-  color: pink;
+box-shadow: var(--btn-shadow-hover) var(--primary-color);
 }
-.button3
+.warning-btn 
 {
-  transition-duration: 0.3s;
+background-color: var(--warning-color);
 }
-.button3:hover 
+.warning-btn:hover 
 {
-  background-color: #008CBA;
-  color: skyblue;
+box-shadow: var(--btn-shadow-hover) var(--warning-color);
 }
-.button4
+.dark-btn 
 {
-  transition-duration: 0.8s;
+background-color: var(--dark-color);
 }
-.button4:hover 
+.dark-btn:hover 
 {
-  background-color: #04AA6D;
-  color: maroon;
+box-shadow: var(--btn-shadow-hover) var(--dark-color);
 }
-.button5
-{
-  transition-duration: 0.4s;
-}
-.button5:hover 
-{
-  background-color: #f44336;
-  color: linen;
-}
-.button1 {background-color: #04AA6D;} /*Green */
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */ 
-.button4 {background-color: #e7e7e7;} /* Gray */ 
-.button5 {background-color: #555555;} /* Black */
 </style>
 </head>
-<body bgcolor=linen>
-<h1>Buttons</h1>
-<button class="button button1">Button</button>
-<button class="button button2">Button</button>
-<button class="button button3">Button</button>
-<button class="button button4">Button</button>
-<button class="button button5">Button</button>
+<body>
+<button>Button</button>
+<button class="btn primary-btn">Button</button>
+<button class="btn danger-btn">Button</button>
+<button class="btn success-btn">Button</button>
+<button class="btn warning-btn">Button</button>
+<button class="btn dark-btn">Button</button>
 </body>
 </html>
-
-
